@@ -13,8 +13,115 @@
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+    <!-- capacitor info -->
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Capacitor Info</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+          <ion-list inset="true">
+            <ion-item>
+              <ion-label>Platform name: {{platformName}} </ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-label>Native platform? {{nativePlatform}} </ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-label>Camera available: {{cameraAvailable}} </ion-label>
+            </ion-item>
+          </ion-list>
+      </ion-card-content>
+    </ion-card>
+
+    <!-- device info -->
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Device Info</ion-card-title>
+      </ion-card-header>
+        <ion-card-content>
+          <ion-list inset="true">
+            <ion-item>
+              <ion-label>Name: </ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-label>Operating System: {{operatingSystem}} </ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-label>Manufacturer: {{manufacturer}} </ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-label>Is Virtual: {{isVirtual}} </ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-label>UUID: {{uuid}} </ion-label>
+            </ion-item>
+          </ion-list>
+        </ion-card-content>
+    </ion-card>
+
+    <!-- battery info -->
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Battery Info</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+
+        <ion-list inset="true">
+          <ion-item>
+            <ion-label>Battery Level: {{batteryLevel}} </ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label>Is charging? {{isCharging}} </ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+
+     <!-- network info -->
+     <ion-card>
+      <ion-card-header>
+        <ion-card-title>Network Info</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+
+        <ion-list inset="true">
+          <ion-item>
+            <ion-label>Is Connected? {{isConnected}}</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label>Connection Type: {{connectionType}} </ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+
+    <!-- network info -->
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Accelerometer</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+
+        <ion-list inset="true">
+          <ion-item>
+            <ion-label>Current Acceleration: [{{x}}, {{y}}, {{z}}] </ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+
+     <!-- events log -->
+     <ion-card>
+      <ion-card-header>
+        <ion-card-title>Events Log</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+
+        <ion-list inset="true">
+          <ion-item *ngFor="let log of logs">
+            <ion-label> {{log}} </ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
 </ion-content>
